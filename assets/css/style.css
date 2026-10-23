@@ -1,0 +1,57 @@
+:root {
+  --color-primary: #1e331e;
+  --color-secondary: #4a6b46;
+  --color-accent: #8ea87d;
+  --color-bg-main: #f9f8f3;
+  --color-bg-card: #ffffff;
+  --color-text-main: #142214;
+  --color-text-muted: #5c6b5b;
+  --color-border: #e2e8df;
+}
+
+body {
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.card-menu {
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.card-menu:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 1px 2px rgba(20, 34, 20, 0.04), 0 8px 24px -12px rgba(20, 34, 20, 0.12);
+}
+
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+input:focus, select:focus, textarea:focus, button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(142, 168, 125, .3);
+  border-color: var(--color-secondary);
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] { -moz-appearance: textfield; }
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff; }
+}
